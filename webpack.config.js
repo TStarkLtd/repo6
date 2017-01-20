@@ -15,12 +15,9 @@ var config = {
   },
   module: {
     loaders: [{
-      test: /\.jsx?$/,
+      test: /\.js?$/,
       exclude: /node_modules/,
-      loader: 'babel',
-      query: {
-        presets: ['es2015','react']
-      }
+      loaders: ['ng-annotate', 'babel']
     },
 	{
     test: /\.html$/,

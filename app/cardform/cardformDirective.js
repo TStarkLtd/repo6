@@ -27,7 +27,7 @@ export default class cardformDirective {
 class cardformDirectiveController {
 	
 	constructor(cardsData,$location) {
-		
+		'ngInject';
 		console.log(cardsData);
 		//console.log(this.buttonLabel);
 		this.name = 'cardformDirectiveController';
@@ -60,5 +60,3 @@ class cardformDirectiveController {
 	}
 	
 }
-
-cardformDirectiveController.$inject = ['cardsData','$location'];
