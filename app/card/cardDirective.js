@@ -61,7 +61,4 @@ class cardDirectiveController {
 	
 }
 
-
-cardDirective.$inject = ['ui.router'];
-
 export default cardDirective;

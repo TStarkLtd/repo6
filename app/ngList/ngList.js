@@ -7,3 +7,4 @@ import itemslist from '../itemslist/itemslist.js'
 export default angular.module('ngList', ['itemslist'])
 	.controller('listController', listController)
 	.directive('listDirective', () => new listDirective);
+  .name;

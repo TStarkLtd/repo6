@@ -1,7 +1,5 @@
-routes.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
-
 export default function routes($stateProvider, $urlRouterProvider, $locationProvider) {
-	console.log($stateProvider, $urlRouterProvider);
+  'ngInject';
 	//$locationProvider.html5Mode({ enabled: true , requireBase: false });
 	$urlRouterProvider.otherwise('/index');
 	

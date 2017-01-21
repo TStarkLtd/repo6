@@ -2,6 +2,7 @@
 class kanbanDirectiveController {
 	
 	constructor(cardsData) {
+    'ngInject';
 		
 		//console.log(cardsData);
 
@@ -51,6 +52,7 @@ class kanbanDirectiveController {
 
 class kanbanDirective {
     constructor(uirouter) {
+        'ngInject';
         this.template = `<div class="app"> <a title="new" class="float-button" ui-sref="new">+</a> <card-list id="todo" title="To Do" cards="ctrl.todo" add-task="ctrl.addTask" delete-task="ctrl.deleteTask" ></card-list> <card-list id="in-progress" title="In Progress" cards="ctrl.inprogress" add-task="ctrl.addTask" delete-task="ctrl.deleteTask" ></card-list> <card-list id="done" title="Done" cards="ctrl.done" add-task="ctrl.addTask" delete-task="ctrl.deleteTask" ></card-list> </div>`;
         this.restrict = 'EA';
         this.scope = {
@@ -71,8 +73,5 @@ class kanbanDirective {
 		
     }
 }
-
-kanbanDirectiveController.$inject = ['cardsData'];
-kanbanDirective.$inject = ['ui.router'];
 
 export default kanbanDirective;
