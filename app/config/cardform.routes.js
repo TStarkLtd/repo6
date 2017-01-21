@@ -2,7 +2,7 @@ export default function routing($stateProvider, $urlRouterProvider, $locationPro
 	'ngInject';
   $stateProvider
 		.state('new', {
-			//parent: 'index',
+			parent: 'index',
 			url: '/new',
 			resolve: {
 				myResolve1: ['$stateParams', function($stateParams) {
