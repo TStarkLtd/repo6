@@ -26,7 +26,7 @@ export default class cardformDirective {
 
 class cardformDirectiveController {
 	
-	constructor(cardsData,$location) {
+	constructor(cardsData,$state) {
 		'ngInject';
 		console.log(cardsData);
 		//console.log(this.buttonLabel);
@@ -50,11 +50,13 @@ class cardformDirectiveController {
 			//console.log(this.draftCard);
 			let cards = cardsData.upsertCards(this.draftCard);
 			//console.log(cards);
-			$location.path("/");
+			//$location.path("/");
+			$state.go('index', null, { reload: true });
 		};
 		
 		this.cancel = () => {
-			$location.path("/");
+			//$location.path("/");
+			$state.go('index', null, { reload: true });
 		};
 
 	}
