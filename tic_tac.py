@@ -10,10 +10,11 @@ def drawBoard(board, n):
 
     # This function prints out the board that it was passed.
     # "board" is a list of strings representing the board (ignore index 0)
-
+    #print board
     for i in range(1,n+1):
         for j in range(1,n+1):
-            print '%2s' % board[n*(i-1)+j],
+            #print n*(i-1)+j
+            print '{:>4s}'.format(str(board[n*(i-1)+j])),
             if j%n:
                 print(' |'),
             else:
@@ -144,7 +145,7 @@ def isBoardFull(board, n):
 
 
 
-
+print ''
 print('Welcome to Tic Tac Toe!')
 print ''
 
@@ -152,8 +153,13 @@ N = 3
 
 while True:
 
-    # Reset the board
+    dimen = ''
+    while dimen not in [str(x) for x in range(1,10)]:
+        print('What is your favourite dimension: (1-%s)' % (9))
+        dimen = raw_input()
+        N = int(dimen)
 
+    # Reset the board
     theBoard = []
     theBoard.extend(range(0,N**2+1))
 
